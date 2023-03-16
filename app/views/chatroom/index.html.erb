@@ -4,17 +4,9 @@
     <div class="col-sm-9">
         <div class="card my-3">
             <div class="card-body">
-            
-                <% @messages.each do |message| %>
 
-                    <div class="alert alert-primary" role="alert">
-                        <div class="row">
-                            <div class="col-sm-8"><%= message.body %></div>
-                            <div class="col-sm-4 text-right"><%= message.user.email %></div>
-                        </div>
-                    </div>
-
-                <% end %>
+                <%= render @messages %>
+                    
             </div>
         </div>
     </div>
