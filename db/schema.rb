@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_15_180348) do
+
   create_table "messages", force: :cascade do |t|
     t.string "body"
     t.integer "user_id", null: false

@@ -7,15 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 10.times do |i|
+    
     @user = User.create(
         email: "user#{i}@gmail.com",
         password: "password"
     )
 
     Message.create(
-        body: "testMessage#{i}",
+        body: "Message #{i}",
         user_id: @user.id
     )
 
- 
 end
