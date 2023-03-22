@@ -22,6 +22,23 @@
     <%= render 'layouts/navbar'%>
 
     <div class="container">
+      <% if flash[:success] %>
+          <div class="alert alert-success">
+              <%= flash[:success] %>
+          </div>
+      <% end %>
+
+      <% if flash[:notice] %>
+          <div class="alert alert-warning">
+              <%= flash[:notice] %>
+          </div>
+      <% end %>
+
+      <% if flash[:danger] %>
+          <div class="alert alert-danger">
+              <%= flash[:danger] %>
+          </div>
+      <% end %>
 
       <%= yield %>
     </div>
