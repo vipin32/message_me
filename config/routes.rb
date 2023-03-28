@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "chatroom#index"
-  get "chatroom", to: "chatroom#show"
   get "login", to: "sessions#new"
   post "login", to: "sessions#login"
+  get "chatroom", to: "chatroom#show"
+  post "message", to: "message#create"
+
 
 end
